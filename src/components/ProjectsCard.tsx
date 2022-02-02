@@ -51,7 +51,6 @@ export function ProjectsCard() {
           </ListItem>
         ))}
       </UnorderedList>
-      <Divider m="1em 0" />
     </Card>
   );
 }
