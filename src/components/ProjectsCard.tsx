@@ -1,17 +1,21 @@
 import { Divider, Heading, ListItem, Tag, TagLabel, UnorderedList } from '@chakra-ui/react';
-import { faCode, faFire, faGamepad, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faFire, faGamepad, faLaptopCode, faList, faSync } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card } from '../components';
 
 export function ProjectsCard() {
   const projects = [
-    { icon: faLaptopCode, name: 'Vim', description: 'An efficient text editor.', link: 'https://vim.org' },
-    { icon: faLaptopCode, name: 'VSCode', description: 'Defacto code editor.', link: 'https://code.visualstudio.com' },
     {
       icon: faCode,
       name: 'Deno',
       description: 'A secure runtime or JavaScript and TypeScript build with V8, Rust, and Tokio.',
       link: 'https://deno.land',
+    },
+    {
+      icon: faFire,
+      name: 'Firebase',
+      description: 'An easy to use suite of tools for web and mobile development.',
+      link: 'https://firebase.google.com',
     },
     {
       icon: faGamepad,
@@ -27,17 +31,19 @@ export function ProjectsCard() {
       link: 'https://retropi.org.uk',
     },
     {
-      icon: faFire,
-      name: 'Firebase',
-      description: 'An easy to use suite of tools for web and mobile development.',
-      link: 'https://firebase.google.com',
+      icon: faSync,
+      name: 'SyncThing',
+      description: 'A free, open-source peer-to-peer file synchronization application.',
+      link: 'https://syncthing.net',
     },
+    { icon: faLaptopCode, name: 'Vim', description: 'An efficient text editor.', link: 'https://vim.org' },
+    { icon: faLaptopCode, name: 'VSCode', description: 'Defacto code editor.', link: 'https://code.visualstudio.com' },
   ];
   return (
     <Card>
       <Heading size="md" mb="2">
-        <FontAwesomeIcon icon={faCode} style={{ marginRight: '0.5rem', fontSize: '1.125rem' }} />
-        Interesting Projects
+        <FontAwesomeIcon icon={faList} style={{ marginRight: '0.5rem', fontSize: '1.125rem' }} />
+        Cool Projects
       </Heading>
       <Divider m="1em 0" />
       <UnorderedList>

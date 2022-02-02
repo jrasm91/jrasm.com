@@ -19,8 +19,8 @@ function Home() {
         </VStack>
         <VStack>
           <AboutCard />
-          <ProjectsCard />
           <SocialCard />
+          <ProjectsCard />
         </VStack>
       </Flex>
     </Layout>
