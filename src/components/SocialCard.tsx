@@ -1,13 +1,14 @@
 import { Divider, Heading, Link, Tag } from '@chakra-ui/react';
+import { faGithub, faLinkedin, faStrava } from '@fortawesome/free-brands-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card } from '../components';
 
 export function SocialCard() {
   const items = [
-    { name: 'Github', link: 'https://github.com/jrasm91' },
-    { name: 'LinkedIn', link: 'https://www.linkedin.com/in/jason-rasmussen' },
-    { name: 'Strava', link: 'https://www.strava.com/athletes/7824214' },
+    { name: 'Github', icon: faGithub, link: 'https://github.com/jrasm91' },
+    { name: 'LinkedIn', icon: faLinkedin, link: 'https://www.linkedin.com/in/jason-rasmussen' },
+    { name: 'Strava', icon: faStrava, link: 'https://www.strava.com/athletes/7824214' },
   ];
   return (
     <Card>
@@ -17,9 +18,12 @@ export function SocialCard() {
       </Heading>
       <Divider m="1em 0" />
       Follow me on{' '}
-      {items.map(({ name, link }) => (
+      {items.map(({ name, icon, link }) => (
         <Link key={name} href={link} isExternal={true} mr="0.25rem">
-          <Tag>{name}</Tag>
+          <Tag>
+            <FontAwesomeIcon icon={icon} style={{ marginRight: '0.25rem' }} />
+            {name}
+          </Tag>
         </Link>
       ))}
     </Card>
