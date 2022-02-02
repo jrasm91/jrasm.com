@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, extendTheme, withDefaultColorScheme } from '@chakra-ui/react';
+import React from 'react';
+import { hydrate, render } from 'react-dom';
+import App from './App';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 
 const config = {
   initialColorMode: 'dark',
@@ -12,14 +12,20 @@ const config = {
 
 const theme = extendTheme({ config }, withDefaultColorScheme({ colorScheme: 'blue' }));
 
-ReactDOM.render(
+const rootElement = document.getElementById('root');
+const app = (
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <App />
     </ChakraProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
+
+if (rootElement?.hasChildNodes()) {
+  hydrate(app, rootElement);
+} else {
+  render(app, rootElement);
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
