@@ -1,4 +1,4 @@
-import { Box, Divider } from '@chakra-ui/react';
+import { Box, Divider, useColorModeValue } from '@chakra-ui/react';
 import { Header } from './Header';
 
 interface LayoutProps {
@@ -6,8 +6,9 @@ interface LayoutProps {
 }
 
 export function Layout(props: LayoutProps) {
+  const bgGradient = useColorModeValue('', 'linear(to-br, black, blue.900)');
   return (
-    <Box pb="4rem" height="full" width="full">
+    <Box bgGradient={bgGradient} pb="4rem" height="full" width="full">
       <Header />
       <Divider />
       <Box m="1rem">{props.children}</Box>
