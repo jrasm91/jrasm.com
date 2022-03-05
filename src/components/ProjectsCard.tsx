@@ -1,7 +1,8 @@
-import { Divider, Heading, ListItem, Tag, TagLabel, UnorderedList } from '@chakra-ui/react';
+import { Divider, Heading, ListItem, TagLabel, UnorderedList } from '@chakra-ui/react';
 import { faCode, faFire, faGamepad, faLaptopCode, faList, faSync } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card } from '../components';
+import { MyTag } from './MyTag';
 
 export function ProjectsCard() {
   const projects = [
@@ -49,10 +50,10 @@ export function ProjectsCard() {
       <UnorderedList>
         {projects.map(({ name, description, icon, link }) => (
           <ListItem key={name} mb="0.75rem">
-            <Tag key={name}>
+            <MyTag key={name}>
               <FontAwesomeIcon icon={icon} style={{ marginRight: '0.25rem' }} />
               <TagLabel>{name}</TagLabel>
-            </Tag>{' '}
+            </MyTag>{' '}
             - {description}
           </ListItem>
         ))}

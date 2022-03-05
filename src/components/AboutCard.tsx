@@ -1,7 +1,8 @@
-import { Box, Divider, Flex, Heading, ListItem, Tag, UnorderedList } from '@chakra-ui/react';
+import { Box, Divider, Flex, Heading, ListItem, UnorderedList } from '@chakra-ui/react';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card } from './Card';
+import { MyTag } from './MyTag';
 
 export function AboutCard() {
   const skills = ['Nebular', 'Angular', 'Bootstrap', 'Nodejs', 'Express', 'Nest', 'Chakra', 'React'];
@@ -20,7 +21,7 @@ export function AboutCard() {
           <Box>Full stack developer, building applications with javascript.</Box>
           <Flex wrap="wrap" gap="0.25rem">
             {skills.map((skill) => (
-              <Tag key={skill}>{skill}</Tag>
+              <MyTag key={skill}>{skill}</MyTag>
             ))}
           </Flex>
         </ListItem>
@@ -28,7 +29,7 @@ export function AboutCard() {
           <Box>Learning Web3</Box>
           <Flex wrap="wrap" gap="0.25rem">
             {learning.map((skill) => (
-              <Tag key={skill}>{skill}</Tag>
+              <MyTag key={skill}>{skill}</MyTag>
             ))}
           </Flex>
         </ListItem>

@@ -1,8 +1,9 @@
-import { Divider, Flex, Heading, Link, Tag } from '@chakra-ui/react';
+import { Divider, Flex, Heading, Link } from '@chakra-ui/react';
 import { faGithub, faLinkedin, faStrava, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card } from '../components';
+import { MyTag } from './MyTag';
 
 export function SocialCard() {
   const items = [
@@ -21,10 +22,10 @@ export function SocialCard() {
       <Flex wrap="wrap" gap="0.25rem">
         {items.map(({ name, icon, link }) => (
           <Link key={name} href={link} isExternal={true} mr="0.25rem">
-            <Tag>
+            <MyTag>
               <FontAwesomeIcon icon={icon} style={{ marginRight: '0.25rem' }} />
               {name}
-            </Tag>
+            </MyTag>
           </Link>
         ))}
       </Flex>
