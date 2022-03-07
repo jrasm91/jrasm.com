@@ -1,4 +1,5 @@
-import { Flex, Heading, HStack, Link, useColorModeValue } from '@chakra-ui/react';
+import { Button, Flex, Heading, HStack, Link, useColorModeValue } from '@chakra-ui/react';
+import { useColorScheme } from '../hooks';
 import { ThemeButton } from './ThemeButton';
 
 export const Header = () => {
@@ -13,10 +14,11 @@ export const Header = () => {
       color={useColorModeValue('gray.800', 'gray.200')}
     >
       <Heading size="lg">jrasm.com</Heading>
-      {/* <Button variant="link">Blog</Button> */}
       <HStack>
-        <Link fontSize="lg" href="https://blog.jrasm.com" isExternal>
-          Blog
+        <Link mr="2" fontSize="lg" href="https://blog.jrasm.com" isExternal>
+          <Button colorScheme={useColorScheme()} variant="link">
+            Blog
+          </Button>
         </Link>
         <ThemeButton />
       </HStack>
