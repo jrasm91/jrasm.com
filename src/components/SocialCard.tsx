@@ -1,5 +1,5 @@
 import { Divider, Flex, Heading, Link } from '@chakra-ui/react';
-import { faGithub, faLinkedin, faStrava, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEthereum, faGithub, faLinkedin, faStrava, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card } from '../components';
@@ -28,6 +28,10 @@ export function SocialCard() {
             </MyTag>
           </Link>
         ))}
+        <MyTag>
+          <FontAwesomeIcon icon={faEthereum} style={{ marginRight: '0.25rem' }} />
+          jrasm.eth
+        </MyTag>
       </Flex>
     </Card>
   );
