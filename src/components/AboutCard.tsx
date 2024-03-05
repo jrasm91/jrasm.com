@@ -6,8 +6,7 @@ import { Card } from './Card';
 import { MyTag } from './MyTag';
 
 export function AboutCard() {
-  const skills = ['Nebular', 'Angular', 'Bootstrap', 'Nodejs', 'Express', 'Nest', 'Chakra', 'React'];
-  const learning = ['Solidity', 'Ethers', 'Hardhat', 'MetaMask'];
+  const skills = ['Svelte', 'Angular', 'Bootstrap', 'Nodejs', 'Express.js', 'NestJS', 'Bootstrap', 'Tailwind CSS'];
 
   const linkColor = useColorModeValue('purple.600', 'teal.200');
 
@@ -21,7 +20,14 @@ export function AboutCard() {
       <UnorderedList>
         <ListItem mb="0.75rem">Husband, father, code ninja, technology enthusiast.</ListItem>
         <ListItem mb="0.75rem">
-          <Box>Full stack developer, building applications with javascript.</Box>
+          Core maintainer for{' '}
+          <Link color={linkColor} href="https://github.com/immich-app/immich" isExternal>
+            Immich
+            <ExternalLinkIcon mx="2px" />
+          </Link>
+        </ListItem>
+        <ListItem mb="0.75rem">
+          <Box>Full stack developer, building applications with JavaScript.</Box>
           <Flex wrap="wrap" gap="0.25rem">
             {skills.map((skill) => (
               <MyTag key={skill}>{skill}</MyTag>
@@ -36,17 +42,7 @@ export function AboutCard() {
             for a list of <i>everything</i> I've used)
           </Text>
         </ListItem>
-        <ListItem mb="0.75rem">
-          <Box>Learning Web3</Box>
-          <Flex wrap="wrap" gap="0.25rem">
-            {learning.map((skill) => (
-              <MyTag key={skill}>{skill}</MyTag>
-            ))}
-          </Flex>
-        </ListItem>
-        <ListItem mb="0.75rem">
-          I enjoy cycling, hiking, camping, and learning about new technology, electronics, electric vehicles, and crypto.
-        </ListItem>
+        <ListItem mb="0.75rem">I enjoy cycling, hiking, camping, and learning about new technology, and working in open source.</ListItem>
       </UnorderedList>
     </Card>
   );

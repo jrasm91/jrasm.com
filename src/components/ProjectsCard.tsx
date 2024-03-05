@@ -1,5 +1,5 @@
 import { Divider, Heading, ListItem, TagLabel, UnorderedList } from '@chakra-ui/react';
-import { faCode, faFire, faGamepad, faLaptopCode, faList, faSync } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faGamepad, faImage, faLaptopCode, faList, faSync } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card } from '../components';
 import { MyTag } from './MyTag';
@@ -7,16 +7,16 @@ import { MyTag } from './MyTag';
 export function ProjectsCard() {
   const projects = [
     {
+      icon: faImage,
+      name: 'Immich',
+      description: 'Self-hosted backup solution for photos and videos on mobile device',
+      link: 'https://immich.app',
+    },
+    {
       icon: faCode,
       name: 'Deno',
       description: 'A secure runtime or JavaScript and TypeScript build with V8, Rust, and Tokio.',
       link: 'https://deno.land',
-    },
-    {
-      icon: faFire,
-      name: 'Firebase',
-      description: 'An easy to use suite of tools for web and mobile development.',
-      link: 'https://firebase.google.com',
     },
     {
       icon: faGamepad,
